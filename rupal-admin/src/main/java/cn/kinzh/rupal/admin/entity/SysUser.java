@@ -1,7 +1,10 @@
 package cn.kinzh.rupal.admin.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -89,6 +92,15 @@ public class SysUser implements Serializable {
      * 是否删除 -1删除， 0正常
      */
     private Byte delFlag;
+
+    // 非数据库字段
+    private String deptName;
+
+    // 非数据库字段
+    private String roleNames;
+
+    // 非数据库字段
+    private List<SysUserRole> userRoles = new ArrayList<>();
 
     private static final long serialVersionUID = 1L;
 }

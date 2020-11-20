@@ -2,6 +2,8 @@ package cn.kinzh.rupal.admin.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -54,6 +56,21 @@ public class SysDept implements Serializable {
      * 是否删除 -1删除 0正常
      */
     private Byte delFlag;
+
+    /**
+     * 子部门树 非数据库字段
+     */
+    private List<SysDept> children;
+
+    /**
+     * 上级部门名字 非数据库字段
+     */
+    private String parentName;
+
+    /**
+     * 部门树级别 非数据库字段
+     */
+    private Integer level;
 
     private static final long serialVersionUID = 1L;
 }

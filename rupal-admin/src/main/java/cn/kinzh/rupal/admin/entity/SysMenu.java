@@ -2,6 +2,8 @@ package cn.kinzh.rupal.admin.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -74,6 +76,15 @@ public class SysMenu implements Serializable {
      * 是否删除 -1删除 0正常
      */
     private Byte delFlag;
+
+    // 非数据库字段
+    private String parentName;
+
+    // 非数据库字段
+    private Integer level;
+
+    // 非数据库字段
+    private List<SysMenu> children;
 
     private static final long serialVersionUID = 1L;
 }

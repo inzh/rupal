@@ -32,11 +32,6 @@ public class SysConfigController {
         return HttpResult.ok(sysConfigService.delete(records));
     }
 
-    @GetMapping("/findById")
-    public HttpResult findById(@RequestParam Long id) {
-        return HttpResult.ok(sysConfigService.findById(id));
-    }
-
     @PostMapping("/findPage")
     public HttpResult findPage(@RequestBody PageRequest pageRequest) {
         return HttpResult.ok(sysConfigService.findPage(pageRequest));

@@ -7,6 +7,7 @@ import cn.kinzh.rupal.core.page.MybatisPageHelper;
 import cn.kinzh.rupal.core.page.PageRequest;
 import cn.kinzh.rupal.core.page.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * @Description: 配置
  * @date 2020/11/20
  */
+@Service
 public class SysConfigServiceImpl implements SysConfigService {
 
 
