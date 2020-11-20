@@ -11,7 +11,7 @@ import java.util.List;
  * @Description: 通用crud接口
  * @date 2020/11/18
  */
-public interface CrudService<T> {
+public interface CurdService<T> {
 
     /*
      * @Author inzh

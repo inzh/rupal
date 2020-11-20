@@ -1,6 +1,7 @@
 package cn.kinzh.rupal.admin.mapper;
 
 import cn.kinzh.rupal.admin.entity.SysUser;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,5 +18,12 @@ public interface SysUserMapper {
 
     int updateByPrimaryKey(SysUser record);
 
-    List<SysUser> findAll();
+
+    List<SysUser> findPage();
+
+    SysUser findByName(@Param(value = "username") String username);
+
+    List<SysUser> findPageByName(@Param(value="name") String name);
+
+    List<SysUser> findPageByNameAndEmail(@Param(value="name") String name, @Param(value="email") String email);
 }

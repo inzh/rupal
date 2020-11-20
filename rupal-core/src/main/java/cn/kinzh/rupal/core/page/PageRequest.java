@@ -38,4 +38,8 @@ public class PageRequest {
     public void setParams(Map<String, Object> params) {
         this.params = params;
     }
+
+    public Object getParam(String key) {
+        return getParams().get(key);
+    }
 }
